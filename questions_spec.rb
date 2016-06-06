@@ -55,7 +55,7 @@ describe 'the Friday test :)' do
     expect(n).to eq ['puma', 'maker', 'sky']
   end
 
-  it 'get_first_half_of_string' do
+  fit 'get_first_half_of_string' do
     a = get_first_half_of_string 'banana'
     b = get_first_half_of_string 'apple'
 
@@ -63,7 +63,7 @@ describe 'the Friday test :)' do
     expect(b).to eq 'app'
   end
 
-  it 'make_numbers_negative' do
+  fit 'make_numbers_negative' do
     a = make_numbers_negative 5
     b = make_numbers_negative -7
 
@@ -76,7 +76,7 @@ describe 'the Friday test :)' do
     expect(n).to eq [[2, 4, 6], [1, 3, 5, 7]]
   end
 
-  it 'number_of_elements_that_are_palindromes' do
+  fit 'number_of_elements_that_are_palindromes' do
     n = number_of_elements_that_are_palindromes ['bob', 'radar', 'alex', 'noon', 'banana']
     expect(n).to eq 3
   end
@@ -121,7 +121,7 @@ describe 'the Friday test :)' do
     expect(n).to eq({'a' => 'b', 'c' => 'd'})
   end
 
-  it 'get_all_letters_in_array_of_words' do
+  fit 'get_all_letters_in_array_of_words' do
     n = get_all_letters_in_array_of_words ['cat', 'dog', 'fish']
     expect(n).to eq ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
   end
@@ -136,7 +136,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 6
   end
 
-  it 'remove_capital_letters_from_string' do
+  fit 'remove_capital_letters_from_string' do
     n = remove_capital_letters_from_string 'Hello JohnDoe'
     expect(n).to eq 'ello ohnoe'
   end
@@ -161,12 +161,12 @@ describe 'the Friday test :)' do
     expect(n).to eq 'makersacademy'
   end
 
-  it 'titleize_a_string' do
+  fit 'titleize_a_string' do
     n = titleize_a_string 'the lion the witch and the wardrobe'
     expect(n).to eq 'The Lion the Witch and the Wardrobe'
   end
 
-  it 'check_a_string_for_special_characters' do
+  fit 'check_a_string_for_special_characters' do
     a = check_a_string_for_special_characters 'ABCdef123'
     b = check_a_string_for_special_characters 'ABC@def123!'
 
@@ -174,12 +174,12 @@ describe 'the Friday test :)' do
     expect(b).to be true
   end
 
-  it 'get_upper_limit_of' do
+  fit 'get_upper_limit_of' do
     n = get_upper_limit_of 1..20
     expect(n).to eq 20
   end
 
-  it 'is_a_3_dot_range?' do
+  fit 'is_a_3_dot_range?' do
     a = is_a_3_dot_range? 1..20
     b = is_a_3_dot_range? 1...20
 
@@ -187,23 +187,23 @@ describe 'the Friday test :)' do
     expect(b).to be true
   end
 
-  it 'square_root_of' do
+  fit 'square_root_of' do
     a = square_root_of 9
     b = square_root_of 3
     expect(a).to eq 3.0
     expect(b).to eq 1.7320508075688772
   end
 
-  it 'word_count_a_file' do
+  fit 'word_count_a_file' do
     n = word_count_a_file 'data/lorem.txt'
     expect(n).to eq 70
   end
 
-  it 'call_method_from_string' do
+  fit 'call_method_from_string' do
     expect { call_method_from_string('foobar') }.to raise_error(NameError)
   end
 
-  it 'is_a_2014_bank_holiday?' do
+  fit 'is_a_2014_bank_holiday?' do
     a = is_a_2014_bank_holiday?(Time.new(2014, 8, 25))
     b = is_a_2014_bank_holiday?(Time.new(2014, 8, 26))
 
@@ -211,12 +211,12 @@ describe 'the Friday test :)' do
     expect(b).to be false
   end
 
-  it 'your_birthday_is_on_a_friday_in_the_year' do
+  fit 'your_birthday_is_on_a_friday_in_the_year' do
     n = your_birthday_is_on_a_friday_in_the_year(Time.new(2013, 1, 1))
     expect(n).to eq 2016
   end
 
-  it 'count_words_of_each_length_in_a_file' do
+  fit 'count_words_of_each_length_in_a_file' do
     n = count_words_of_each_length_in_a_file('data/lorem.txt') || []
     expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3})
   end
